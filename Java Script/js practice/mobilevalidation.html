@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="#">
+        <label for="">Enter Your no:</label>
+        <input type="text" name="" id="mnumber" onblur="return mobilefuc()" onkeyup="return checknumber()" maxlength="10">
+        <button onclick=" return mobilefuc()">Click here</button>
+        <p id="msg"></p>
+    </form>
+      <script>
+        function mobilefuc(){
+          let mfun=document.getElementById("mnumber").value;
+          if( mfun == "" || mfun == null){
+                document.getElementById("msg").innerText="Enter mobile Number";
+                return false
+          } else{
+            document.getElementById("msg").innerText="";
+            return false
+          }     
+        }
+        function checknumber(){
+            let mfun=document.getElementById("mnumber").value;
+            let expre=/^[0-9]*$/
+            let expren =/^[6-9]/
+            if(!(expre.test(mfun))){
+                document.getElementById("msg").innerText="Enter number only"
+                return false
+            }else if(!(expren.test(mfun))){
+                document.getElementById("msg").innerText="Frist letter worng"
+                return false
+            }else if(mfun.length < 10){
+                document.getElementById("msg").innerText="Enter 10 digits"
+                return false
+            }
+            else{
+                document.getElementById("msg").innerText=""
+                return false
+            }
+
+        }
+      </script>
+ -->
+
+<form action="#">
+    <label for="">Enter Your Mobile NO:</label>
+    <input type="text" name="mobile no" id="mnum" onblur="return checkmobile()" onkeyup="return excheckmobile() " maxlength="10" autofocus>
+     <button onclick="return checkmobile() ">Click Here</button>
+     <p id="msg"></p>
+
+</form>
+ <script>
+    function checkmobile(){
+        let mnumber=document.getElementById("mnum").value;
+         if(mnumber=="" || mnumber== null){
+            document.getElementById("msg").innerText="Entter Your Moblie Number"
+            return false
+         } else{
+            document.getElementById("msg").innerText=""
+            return false
+         }
+    } 
+    function excheckmobile(){
+        debugger
+        let mnumber=document.getElementById("mnum").value;
+        let expnu=/^[0-9]*$/
+        let exfnum=/^[6-9]/
+        if(!((expnu.test(mnumber)) && (exfnum.test(mnumber)))){
+            document.getElementById("msg").innerText="Enter proper number"
+            return false
+        }else if(mnumber.length <10){
+            document.getElementById("msg").innerText="invalid number"
+            return false
+        }else{
+            document.getElementById("msg").innerText=""
+            return false
+        }
+    }
+ </script>
+</body>
+</html>

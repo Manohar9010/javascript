@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+        firstname : "Rohit",
+        lastname  : "reddy",
+        mobileno  : 9848022338,
+        Birthdate : "30-12-2000",
+     }
+     console.log(person);
+     document.write(person.firstname+"<br>")
+     document.write(person.lastname+"<br>")
+     document.write(person.mobileno+"<br>")
+     document.write(person.Birthdate+"<br>")
+
+     for (const per in person) {
+       console.log(per+"=>"+person[per]);
+     }
+    </script>
+     
+</body>
+</html>

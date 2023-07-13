@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="#">
+          <label for="">Enter Email :</label>
+          <input type="text" name="" id="mail" onblur="checkemail()" onkeyup="return emailexcheck()">
+          <button type="" onclick="checkemail()">Click Here</button>
+          <p id="msg"></p>
+    </form>
+    <script>
+        function checkemail(){
+            let email =document.getElementById("mail").value;
+            if(email == "" || email==null){
+               document.getElementById("msg").innerText="Enter Email"
+               return false; 
+            }else{
+                document.getElementById("msg").innerText=""
+                return false
+            }
+        }
+        function emailexcheck(){
+            let email = document.getElementById("mail").value;
+            let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})+$/
+            if(regex.test(email)){
+                document.getElementById("msg").innerText=""
+                return false
+            }else{
+                document.getElementById("msg").innerText="Enter Proper Email"
+                return false
+            }
+        }
+    </script> -->
+    <form action="#">
+        <label for="">Enter Your Email id :</label>
+        <input type="text" name="" id="emildt" onblur="return clickfuc()" onkeyup="return emailidcheckex()" autofocus>
+        <button onclick=" return clickfuc()">Click here</button>
+        <p id="msg"></p>
+    </form>
+     <script>
+        function clickfuc(){
+            let emaildis=document.getElementById("emildt").value;
+            if(emaildis=="" || emaildis==null){
+                document.getElementById("msg").innerText="Enter Email Id"
+                return false
+            }else{
+                document.getElementById("msg").innerText=""
+                return false
+            }
+
+        }
+        function emailidcheckex(){
+            let emaildis=document.getElementById("emildt").value;
+            let regularex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(regularex.test(emaildis)){
+                document.getElementById("msg").innerText=""
+            }else{
+                document.getElementById("msg").innerText="Invalid Email ID"
+            }
+
+        }
+     </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    margin: 0px 80px;
+}
+header .header-p{
+    padding: 20px 0px;
+}
+header{
+    background-color: burlywood;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    transition: 0.5s all ease;
+}
+header .header-flex{
+    display: flex;
+
+}
+.header_fixed{
+    background-color: teal;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    transition: 0.5s all ease;
+}
+header .header-flex .logo{
+    flex: 1;
+}
+header .header-flex .logo h1{
+    color: white;
+}
+header .header-flex .navbar{
+    flex: 4;
+}
+header .header-flex .navbar ul{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+header .header-flex .navbar ul li{
+    padding: 10px;
+}
+header .header-flex .navbar ul li a{
+    color:white;
+    font-size: 17px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header .header-flex .theme{
+    flex: 0.5;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: end;
+}
+header .header-flex .theme .togglebtn{
+    display: none;
+    position: relative;
+}
+header .header-flex .theme button{
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+/* ========JAVA===== */
+header .header-flex .nav_toggle{
+    flex: 4;
+    background-color: aqua;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+header .header-flex .nav_toggle ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+header .header-flex .nav_toggle ul li{
+    padding: 10px;
+}
+header .header-flex .nav_toggle ul li a{
+    color:white;
+    font-size: 17px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* =========== */
+.bgimage img{
+    height: 670px;
+    width: 100%;
+}
+
+/* ========= media query ========== */
+@media (max-width:576px) {
+    .container{
+        margin: 0px 20px;
+    }
+   
+header .header-flex .navbar{
+    display: none;
+} 
+header .header-flex .theme .togglebtn{
+    display: block;
+}
+header .header-flex .nav_toggle{
+    display: block;
+}
+
+
+    
+}
+ @media (min-width:576px) {
+    .container{
+        margin: 0px 35px;
+    }
+   
+header .header-flex .navbar{
+    display: none;
+} 
+header .header-flex .theme .togglebtn{
+    display: block;
+}
+header .header-flex .nav_toggle{
+    display: block;
+}
+
+    
+}
+@media(min-width:768px){
+    /* inherit */
+ }
+@media (min-width:992px) {
+    .container{
+        margin: 0px 50px;
+    }
+   
+header .header-flex .navbar{
+    display: block;
+} 
+header .header-flex .theme .togglebtn{
+    display: none;
+}
+header .header-flex .nav_toggle{
+    display: none;
+}
+
+    
+}
+@media (min-width:1200px) {
+    .container{
+        margin: 0px 80px;
+    }
+    
+}   

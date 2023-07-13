@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .show{
+            height: auto;
+            width: 150px;
+            font-size: 17px;
+            border: 2px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <label for="number1">Enter any number:</label>
+    <input type="text" name="" id="number1">    <br><br><br><br>
+    <button onclick="tablefuc()">Display</button>
+    <br><br><br><br>
+    <div class="show"></div>
+    <script>
+        
+        function tablefuc(){
+            let num1 = document.getElementById("number1").value;
+            let displayt =document.querySelector(".show")
+               var i=1;
+               var res="";
+
+               if(num1 == "" || num1 == null){
+                alert("Enter value")
+               }else{
+                for(i=1; i<=10;i++){
+                res+="<p>"+num1+"*"+i+"="+(num1*i)+"</p>"
+                    
+               } 
+
+               }
+               
+               displayt.innerHTML=res
+        }
+    </script>
+</body>
+</html>
+

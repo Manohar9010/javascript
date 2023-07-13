@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+        }
+        .list{
+            background-color: indianred;
+        }
+        .list ul{
+            display: flex;
+            gap: 20px;
+        }
+        .list ul li{
+            padding: 10px;
+        }
+        .list ul li a{
+            color: white;
+        }
+        .list ul li span{
+            color: white;
+            font-size: 12px;
+        }
+        .list .innerdrop{
+            position: relative;
+        }
+        .list .innerdrop .dropdown{
+            position: absolute;
+            top: 38px;
+            left: -12px;
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            width: 100px;
+            text-align: center;
+            background-color: blueviolet;
+        }
+        .list .innerdrop .showmenu{
+            display: block;
+        }
+        .list .innerdrop .dropdown li {
+            padding: 5px;
+        }
+        .list .innerdrop .dropdown li a{
+            color: white;
+        }
+        .list .innerdrop .dropdown .cube{
+            height: 10px;
+            width: 10px;
+            background-color: blueviolet;
+            position: absolute;
+            top: -5px;
+            left: 43px;
+            transform: rotate(45deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="list">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li class="innerdrop"><a href="#">Service</a>
+                <span class="fa-solid fa-angle-down"></span>
+               <ul class="dropdown">
+                <div class="cube"></div>
+                <li><a href="">Service 1</a></li>
+                <li><a href="">Service 2</a></li>
+                <li><a href="">Service 3</a></li>
+               </ul>
+            </li>
+            <li><a href="">Abouts</a></li>
+        </ul>
+    </div>
+    <script>
+        let clickbt=document.querySelector(".innerdrop");
+        let view = document.querySelector(".dropdown");
+        clickbt.addEventListener("click",function(){
+            view.classList.toggle("showmenu")
+        })
+    </script>
+</body>
+</html>

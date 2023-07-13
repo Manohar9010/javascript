@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .main{
+        margin: 0px 200px;
+       }
+       .main .three .nums{
+        display: flex;
+        height: 100px;
+        align-items: center;
+
+       }
+       .main .three .nums .num{
+
+        flex: 1;
+        font-size: 50PX;
+        border: 2PX solid black;
+        text-align: center;
+        background-color: beige;
+       }
+    </style>
+    
+</head>
+<body>
+    <img src="painting-mountain-lake-with-mountain-background_188544-9126.avif" alt="">
+    <div class="main">
+         <div class="three">
+        <div class="nums">
+             <div class="num" data-goal="900">100</div>
+            <div class="num" data-goal="1500">250</div>
+            <div class="num" data-goal="2000">350</div>
+            <div class="num" data-goal="2000">150</div>
+        </div>
+        
+        
+    </div>
+    </div>
+   
+      <img src="painting-mountain-lake-with-mountain-background_188544-9126.avif" alt="">
+    <script>
+        let nums = document.querySelectorAll(".nums .num");
+        let section = document.querySelector(".three");
+        let started = false;
+        window.onscroll =function (){
+            if(window.scrollY >= section.offsetTop) {
+                if (!started) {
+                    nums.forEach((num) => startCount(num));
+
+                }
+                started = true;
+            }
+        };
+        function startCount(el){
+            let goal = el.dataset.goal;
+            let count = setInterval(() => {
+                el.textContent++;
+                if(el.textContent == goal){
+                    clearInterval(count);
+                }
+            },10);
+        }
+        // nums .forEach((num)=> startCout(num));
+
+        // function startCout(el){
+        //     let goal = el. dataset.goal;
+        //     let count = setInterval(()=>{
+        //         el.textContent++;
+        //         if(el.textContent==goal){
+        //             clearInterval(count)
+        //         }
+        //     },10);
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    
+    <button onclick="changecss()">press </button>
+    <h1>hello shiva</h1>
+    <a href="" class="link1">hara hara mahadev</a>
+    <script>
+        function changecss(){
+            let link2 =document.querySelector(".link1");
+            document.body.style.backgroundColor="pink"  
+            document.body.style.color="green"
+            link2.style.color="red";
+            link2.style.textDecoration="none"
+  
+        }
+
+    </script>
+<br>
+<h1 class="head1"> hello</h1>
+  <script>
+    let head1=document.querySelector(".head1");
+    head1.addEventListener("mouseover",function(){
+        head1.style.color="blue"
+        head1.style.backgroundColor="grey"
+       
+
+        head1.addEventListener("mouseout",function(){
+            head1.style.color="unset"
+            head1.style.backgroundColor="unset"
+            
+        })
+    })
+  </script>
+</body>
+</html>

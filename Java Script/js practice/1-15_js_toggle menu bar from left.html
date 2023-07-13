@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+     .back{
+        background: url(tree-736885_1280.jpg) no-repeat center;
+        background-size: cover;
+        /* padding: 307px; */
+        padding-left: 80px;
+        padding-top: 20px;
+        padding-bottom: 550px;
+        
+     
+
+     }
+     .btn2{
+      display: flex;
+      gap: 20px;
+   
+     }
+     .back button{
+        height: 40px;
+        width: 40px;
+        color: white;
+        font-size: 17px;
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 5px;
+        cursor: pointer;  
+        
+     }
+     .nav{
+        position: absolute;
+        top: 0;
+        background-color: rgb(42, 198, 236);
+        width: 250px;
+        height: 610px;
+        text-align: center;
+        padding: 20px;
+        /* transform: translatex(-250px); */
+        /* transform: translateY(-700px); */
+        /* transform: translateZ(-750px); */
+        transform: translatex(500px);
+         
+        
+        transition: 1s all ease-in-out;
+        display: none;
+     }
+     .nav ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+     }
+     .nav ul li a{
+        font-size: 19px;
+        font-weight: 700;
+        color: black;
+     }
+     .nav button{
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+        border: 2px solid rgb(42,198,236);
+        font-size: 17px;  
+        transform:translate(100px ,-15px);   
+          
+     }
+     /* create random class for use of javascript */
+     /* .nav-letf{
+        position: absolute;
+        top: 0;
+        background-color: rgb(42, 198, 236);
+        width: 250px;
+        height: 610px;
+        text-align: center;
+        padding: 20px;
+        transform: translatex(0px);
+        transition: 1s all ease;
+     } */
+     /* .nav-letf{
+        position: absolute;
+        display: block;
+        top: 0;
+        background-color: rgb(42, 198, 236);
+        width: 250px;
+        height: 610px;
+        text-align: center;
+        padding: 20px;
+        transform: translatex(0px);
+        transform: translateY(0px);
+
+        transition: 1s all ease;
+
+     } */
+     /* from center */ 
+        .nav-letf{
+            position: absolute;
+            display: block;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            /* color: white; */
+            background-color: rgb(42,198,236);
+            overflow: hidden;
+            display: grid;
+            place-content: center;
+            transition: 5s all ease-in-out;
+          
+            transform: scale(1 );
+
+        }
+     .nav-letf ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+     }
+     .nav-letf ul li a{
+        font-size: 19px;
+        font-weight: 700;
+        color: black;
+     }
+     .nav-letf button{
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+        border: 2px solid rgb(42,198,236);
+        font-size: 17px;
+        transform:translate(100px ,-15px) ;
+        cursor: pointer;      
+            
+     }
+
+     .them{
+       /* background: url(tree-736885_1280.jpg) no-repeat center; */
+        /* background-size: cover; */
+        /* padding: 307px; */
+        /* padding-left: 80px; */
+        /* padding-top: 20px; */
+        /* padding-bottom: 550px; */
+        
+       filter: brightness(50%);
+       z-index: 1;
+     }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div class="back">
+         <div class="btn2">
+            <div>
+               <button id="tbtn">
+                  <span class="fa-solid fa-bars"></span>
+               </button>               
+            </div>
+              <div id="div1">
+                <button>
+                   <span class="fa-solid fa-moon"></span>
+                </button>
+              </div>
+         </div>
+          
+      </div>
+     
+      <div class="nav">
+          <button id="cbtn">
+              <span class="fa-solid fa-xmark"></span>
+          </button>
+          <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Service</a></li>
+              <li><a href="">Pages</a></li>
+              <li><a href="">Registration</a></li>
+              <li><a href="">Login</a></li>
+          </ul>
+      </div>
+    </header>
+    <script>
+         let barbtn =document.getElementById("tbtn")
+         let navbar =document.querySelector(".nav")
+         let closebtn =document.getElementById("cbtn")
+         let div1=document.getElementById("div1")
+         barbtn.addEventListener("click",function(){
+            navbar.classList.add("nav-letf")
+         })
+         closebtn.addEventListener("click",function(){
+            navbar.classList.remove("nav-letf")
+         })
+         
+         let changebg = document.querySelector(".fa-moon");
+
+        changebg.addEventListener("click",function(){
+            document.body.classList.toggle("them")
+
+            if(document.body.classList.contains("them")== true){
+                changebg .classList.remove("fa-moon")
+                changebg .classList.add("fa-sun")
+            }
+            else{
+                changebg .classList.remove("fa-sun")
+                changebg .classList.add("fa-moon")
+            }
+        
+        
+         })
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    margin: 0px 80px;
+}
+header{
+    background-color: transparent;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    width: 100%;
+
+}
+.header-p{
+    padding: 10px 0px;
+}
+header .heder-felx{
+    display: flex;
+    align-items: baseline;
+}
+header .heder-felx .logo{
+  flex: 1;
+  color: white;
+}
+header .heder-felx .theme{
+ flex: 1;
+ display: flex;
+ gap: 20px;
+ font-size: 20px;
+ justify-content: end;
+ align-items: center;
+ color: white;
+ padding-right: 10px;
+
+}
+header .heder-felx .togglebtn button{
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+/* ========= */
+
+.bgimage img{
+    height: 750px;
+    width: 100%;
+}
+.menubar{
+    position: fixed;
+    top: 0;
+    right: -255px;
+    background-color: white;
+    width: 250px;
+    height: 750px;
+    transition: 1s all ease-in-out;
+}
+.menubar .navbar{
+    padding: 20px;
+}
+.menubar .navbar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.menubar .navbar ul a{
+    font-size: 17px;
+    color: black;
+    font-weight: 700;
+}
+.menubar button{
+    height: 45px;
+    width: 45px;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transform: translate(-21px,-21px);
+}
+/* ==create random class which is not include any structure== */
+
+.nav-toggle{
+    position: fixed;
+    top: 0;
+    right: 1px;
+    background-color: white;
+    width: 250px;
+    height: 750px;
+    transition: 1s all ease-in-out;
+}
+.nav-toggle .navbar{
+    padding: 20px;
+}
+.nav-toggle .navbar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.nav-toggle .navbar ul a{
+    font-size: 17px;
+    color: black;
+    font-weight: 700;
+}
+.nav-toggle .fa-close{
+    transform: rotate(90deg);
+    transition: 2s all ease;
+}

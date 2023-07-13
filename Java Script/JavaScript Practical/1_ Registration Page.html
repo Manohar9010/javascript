@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            background-color: aquamarine;
+
+        }
+        .container{
+             margin: 0px  350px ; 
+        }
+        .main-p{
+            padding: 40px 0px;
+        }
+        .rform{
+            text-align: center;
+          /* border: 2px solid black; */
+          width: 100%;
+          background-color: white;
+          box-shadow: 1px 1px 14px 0px rgb(44, 42, 42);
+          /* padding-right: 70px; */
+          padding-bottom: 50px;
+          padding-right: 20px;
+          
+        }
+        .rform .text h1{
+            padding: 30px 0px;
+        }
+        .rform .row{
+            display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          /* gap: 50px; */
+          padding: 5px;
+
+
+        }
+        input[type="text"],[type="date"],select,[type="password"]{
+            height: 35px;
+            width: 250px;
+            padding: 0px 5px;
+            border-radius: 5px;
+            border: 1px solid rgb(124, 117, 117) ;
+        }
+        .col1{
+            margin-right: 70px;
+            text-align: end ;
+            
+        }
+        .col2{
+            text-align: left;
+            margin-left: 30px;
+        }
+        .btn{
+            padding-top: 20px;
+            padding-left: 100px;
+        }
+        .btn button{
+
+            height: 30px;
+            width: 250px;
+            background-color: blue;
+            border: 1px solid blue ;
+            border-radius: 10px;
+            color: white;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container main-p">
+            <div class="rform">
+                <div class="text">
+                    <h1>Registation for Job</h1>
+                </div>
+                <form action="#">
+                    <div class="row">
+                        <div class="col col1">
+                            <label for="">Frist Name</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="fname" id="fname" placeholder="Enter First name" onblur=" return checkfild(this,'msg')" onkeyup="return  namecheck(this,'msg')">
+                        </div>
+                        <div >
+                            <span id="msg"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col1">
+                            <label for="">Middle Name</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="mname" id="mname" placeholder="Enter Middle name" onblur=" return checkfild(this,'msg1')"onkeyup="return  namecheck(this,'msg1')">
+                        </div>
+                         <div >
+                            <span id="msg1"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col1">
+                            <label for="">Last Name</label>
+                        </div>
+                        <div class="col ">
+                            <input type="text" name="lname" id="lname" placeholder="Enter Last name" onblur=" return checkfild(this,'msg2')" onkeyup="return  namecheck(this,'msg2')">
+                        </div>
+                         <div >
+                            <span id="msg2"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col1">
+                            <label for="">Address</label>
+                        </div>
+                        <div class="col">
+                            <textarea name="" id="adr" cols="33" rows="5" style="border-radius: 5px;" maxlength="200" onblur=" return checkfild(this,'msg3')" onkeyup="return addcheck()"></textarea>
+                        </div>
+                         <div >
+                            <span id="msg3"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col1">
+                            <label for="">Date of Birth</label>
+                        </div>
+                        <div class="col">
+                         <input type="date" name=""id="bdate" onblur=" return checkfild(this,'msg4')">
+                        </div>
+                         <div >
+                            <span id="msg4"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col1">
+                            <label for="">Gender</label>
+                        </div>
+                        <div class="col">
+                         <input type="radio" name="gen" id="male" onblur="return gendercheck(this,'msg5')">
+                         <label for="">Male</label>
+                         <input type="radio" name="gen" id="female" onblur="return gendercheck(this,'msg5')">
+                         <label for="">Female</label>
+                        </div>
+                         <div >
+                            <span id="msg5"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col1">
+                            <label for="">Experiance</label>
+                        </div>
+                        <div class="col">
+                         <select name="" id="exp" onblur="return selection(this,'msg6')">
+                            <option value="-1">------select-----</option>
+                            <option value="">2 years</option>
+                            <option value="">5 years</option>
+                         </select>
+                        </div>
+                         <div >
+                            <span id="msg6"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col1">
+                            <label for="">Mobile No</label>
+                        </div>
+                        <div class="col">
+                         <input type="text" name="mnumber" id="mbo" maxlength="10" placeholder="Enter Mobile NO" onblur=" return checkfild(this,'msg7')" onkeyup="return mobilcheck()">
+                        </div>
+                         <div >
+                            <span id="msg7"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col1">
+                            <label for="">Email id</label>
+                        </div>
+                        <div class="col">
+                         <input type="text" name="" id="mail" placeholder="Enter Email" onblur=" return checkfild(this,'msg8')" onkeyup=" return emailcheck()">
+                        </div>
+                         <div >
+                            <span id="msg8"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col1">
+                            <label for="">Create Password</label>
+                        </div>
+                        <div class="col">
+                         <input type="password" name="password" id="pass" placeholder="Enter Password" onblur=" return checkfild(this,'msg9')" onkeyup="return passcheck()" >
+                        </div>
+                         <div >
+                            <span id="msg9"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col1">
+                            <label for="">Confirm Password</label>
+                        </div>
+                        <div class="col">
+                         <input type="password" name="password" id="cpass" placeholder="Enter confirm Password" onblur=" return checkfild(this,'msg10')" onkeyup="return  matchpass()">
+                        </div>
+                         <div >
+                            <span id="msg10"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col1">
+                            
+                        </div>
+                        <div class="col col2">
+                         <input type="checkbox" name="checkbox" id="" onclick="return showpass()"  >
+                         <label for="">Show Password</label>
+                        </div>
+                         <div >
+                            <span id="msg11"></span>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button onclick="return checkemty()">Register</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+   <script src="formjs.js"></script>
+</body>
+</html>

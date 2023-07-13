@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .theme_change{
+            background-color: rgb(41, 38, 38);
+            color: white;
+            font-size: 40px;
+        }
+        .theme{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="theme">
+        <span class="fa-solid fa-moon"></span>
+    </div>
+    <script>
+        let changebg=document.querySelector(".fa-moon")
+         changebg.addEventListener("click",function(){
+            document.body.classList.toggle("theme_change")
+            if(document.body.classList.contains("theme_change")== true){
+                changebg.classList.remove("fa-moon")
+                changebg.classList.add("fa-sun")
+            }else{
+                changebg.classList.add("fa-moon")
+                changebg.classList.remove("fa-sun")
+            }
+         })
+        
+    </script>
+</body>
+</html>

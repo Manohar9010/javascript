@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <label for="">Enter Your Name :</label>
+        <input type="text" name="" id="uname" onblur="return namecheck()" onkeyup="return checkname()">
+        <button onclick="return namecheck()"> click Here</button>
+    </form>
+    <p id="msg"></p>
+    <script>
+        function namecheck(){
+            let uname = document.getElementById("uname").value;
+            if(uname=="" || uname == null){
+                document.getElementById("msg").innerText="Enter Your name"
+                return false;
+            }else{
+                document.getElementById("msg").innerHTML=""
+            }
+        }
+    function checkname(){
+        let uname = document.getElementById("uname").value;
+        let regex = /^[a-zA-Z]*$/
+        if(!(uname.match(regex))){
+            document.getElementById("msg").innerHTML="invalid value";
+            return false
+        }else if (uname.length<2){
+            document.getElementById("msg").innerHTML="Enter proper name"
+            return false
+        }else{
+            document.getElementById("msg").innerText="";
+            return false;
+        }
+    }
+    </script>
+
+</body>
+</html>

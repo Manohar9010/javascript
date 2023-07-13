@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: 50px 350px;
+        }
+        .marksheet{
+            height: 550px;
+            width: 550px;
+            border: 2px solid black;
+            padding: 20px;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        h6{
+            text-align: center;
+            font-weight: 500;
+            font-size: 17px;
+        }
+        .marksheet button{
+            height:30px ;
+            width: 100px;
+        }
+        .row1{
+           padding: 20px 0px;
+           text-align: center;
+           font-size: 17px;
+           font-weight: 600;
+          
+        }
+        p{
+            color: red;
+            text-align: center;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="container">
+            <div class="marksheet">
+                <h1>Marksheet for Information Technology</h1>
+                <h6>Enter Marks</h6>
+                <div class="row">
+                    <div class="col">
+                        <label for="">1.C Language</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="num1"><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="">2.C++ Language</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="num2"><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="">3.Database</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="num3"><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="">4.HTML</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="num4"><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="">5.CSS</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="num5"><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="">6.php</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="num6"><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="">7.Core java</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="num7"><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for=""></label>
+                    </div>
+                    <div class="col">
+                       <button onclick="return  totalmarks()">Result</button>
+                    </div>
+                </div>   
+                <div class="row row1">
+                        <div class="col">
+                           Total is:<span id="totalnu"></span>
+                        </div>
+                        <div class="col">
+                             Percentage :<span id="percentage"></span>
+                        </div>
+                </div>    
+                <p id="msg"> <span id="msg1"></span></p>
+            </div>
+        </div>
+    </div>
+   <script>
+    function totalmarks(){
+        let num1 =document.getElementById("num1").value;
+        let num2 =document.getElementById("num2").value;
+        let num3 =document.getElementById("num3").value;
+        let num4 =document.getElementById("num4").value;
+        let num5 =document.getElementById("num5").value;
+        let num6 =document.getElementById("num4").value;
+        let num7 =document.getElementById("num5").value;
+         
+        var total= parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)+parseInt(num5)+parseInt(num6)+parseInt(num7);
+        document.getElementById("totalnu").innerHTML=total+"/350"
+        var avg=total*100/350
+        document.getElementById("percentage").innerHTML=Math.round (avg,2)+" %"
+        if(num1=="" || num2=="" || num3=="" || num4==""|| num5==""||num6==""||num7==""){
+            document.getElementById("msg").innerText="Enter All marks "
+            return false
+        }else if (num1 > 50 || num2 >50 || num3>50 || num4>50|| num5>50||num6>50||num7>50){
+            document.getElementById("msg").innerText="Each subject max marks are 50 only"
+            return false
+        } 
+        else{
+            document.getElementById("msg").innerText=" "   
+            return false
+        }
+
+    }
+   </script>
+</body>
+</html>

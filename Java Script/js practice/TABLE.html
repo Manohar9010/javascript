@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+    <script>
+        function myfun(){
+           var table=  document.getElementById('frist').value;
+    
+               
+    for(var i=1; i<=10; i++ ){
+        var user=( table + "*" + i +"=" +(table*i)+ "<br>")
+        document.getElementById('msg').innerHTML=user;
+       } 
+     
+          
+
+        }
+       
+        
+    </script> 
+</head>
+<body>
+    <input type="text" name="number" id="frist">
+    <button onclick="return myfun()">click here</button>
+    <div id="msg"></div>
+<!--    
+  <form action="#">
+    <label for="num1">Enter Table Number :</label>
+    <input type="text" name="" id="num1">
+    <button onclick="tablefun()">Display</button> 
+  </form>
+   <div class="div1"></div>
+   <script>
+    function tablefun() {
+             var user =  document.getElementById('num1').value    
+              var show; 
+             if(user=""){
+                alert("enter number")
+             }else{
+                for(var i=1 ; i<=10;i++){
+                   show= (user+"*"+i+"="+(user*i)+"<br>")
+                }
+                   show.innerHTML=div1; 
+            }    
+
+    }
+   </script> -->
+
+
+
+   <form action="">
+    <label for="">Enter any Table Number : </label>
+    <input type="text" name="" id="tblno">
+
+    <button onclick="return table_display()">Display</button>
+</form>
+<div id="div1"></div>
+
+
+<!-- display maths table -->
+<script>
+    function table_display(){
+        var table = document.getElementById("tblno").value;
+        var div_disp = document.getElementById("div1")
+        var i , res="";
+        if(table == ""){
+            alert("Enter value")
+        }else{
+            for(i=1;i<=10;i++){
+                res = res +"<p>" + table + "*" + i + "=" + (table*i) + "</p>";
+            }
+            div_disp.innerHTML = res
+            return false
+        }
+    }
+</script>
+</body>
+</html>

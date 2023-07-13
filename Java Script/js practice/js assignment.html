@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mayvar=5;
+        console.log(mayvar);
+        let num1 =45 ;
+        let num2 =55;
+        num1+=num2
+        console.log(num1)
+        num1-=num2
+        console.log(num1)
+        num1*=num2
+        console.log(num1)
+        num1/=num2
+        console.log(num1)
+        num1%=num2
+        console.log(num1..
+        pp)
+    </script>
+        <p id="mono"></p>
+
+    <script>
+        let x, y, z;
+        x=10;
+        y=15;
+        z=x+y;
+        document.write(x+"<br>");
+        document.write(y+"<br>")
+        document.write("total number="+z)
+        document.getElementById('mono').innerHTML=
+        "total number="+z+".";
+    </script>
+    <button onclick="myfun()"> shivam</button>
+    <p id="local"> </p>
+    <p id="local1"></p>
+    <script>
+        function myfun(){
+            document.getElementById('local').innerHTML="hara hara hara";
+            document.getElementById('local1').innerHTML="mahadev";
+        }
+        
+    </script>
+    <input type="text" name="name" id="name">
+    <button onclick="myfunn()"> greet
+    
+    </button>
+    <div class="gett">
+
+    </div>
+
+    <script>
+        function myfunn(){
+             var mut= document.getElementById('name').value;
+              var srt= "hello " + mut ;
+              document.getElementsByClassName('gett')[0].innerHTML= srt;
+        }
+    </script>
+   <p id="more"></p>
+   <script>
+      var text1="hello ";
+      text1+= " world";
+      document.getElementById('more').innerHTML=text1;    
+   </script>
+   <p id="lok"></p>  
+ <script>
+    
+   var x1 ="it's alright";
+    var y1 =" he is called 'johnny'";
+     var m1 ="he is called rock";
+    document.getElementById('lok').innerHTML= x1 + "<br>  "+ y1 + "<br>" + m1 ;
+ </script>
+ <p id="jloo"></p>
+ <script>
+    function good(a,b){
+        return a*b;
+    }
+
+    var doo = good(3,2);
+    document.getElementById('jloo').innerHTML=doo;
+
+ </script>
+    
+</body>
+</html>

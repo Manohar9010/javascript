@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x=45, res;
+        res=(x > 50);
+        console.log(res);
+        res=(x < 50);
+        console.log(res);
+        res= (x >= 45);
+        console.log(res);
+        res=(x <= 45)
+        console.log(res);
+        res=(x=="45")
+        console.log("==" + res)
+        res=(x != 45)
+        console.log(res);
+        res=(x==="45");
+        console.log(res)
+        res=(x!==45);
+        console.log(res)
+        
+    </script>
+    <input type="text" name="name" id="frist">
+    <button onclick="myfun()">greet</button>
+     <div id="miss"></div>
+    <script>
+        function myfun(){
+           var second = document.getElementById('frist').value;
+             second= "hello" + second;
+             document.getElementById('miss').innerHTML=second;
+        }
+    </script>
+    
+</body>
+</html>

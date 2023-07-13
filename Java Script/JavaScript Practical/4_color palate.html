@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+             
+        margin-left: 500px;
+        margin-top: 100px;
+        }
+        .maincolor{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+
+            padding: 15px;
+
+        }
+        .div1{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="maincolor">
+            <form action="#">
+                <label for="col">Set color :</label>
+                <input type="color" id="col" >
+                <button onclick="return fillcolor()">Set Color</button>
+            
+            </form>
+            <hr>
+           
+            <div class="div1" id="div2"  >
+                <h2>hello</h2>
+                 
+            </div>
+        </div>
+    </div>
+    
+   
+    <script>
+      function fillcolor(){
+        let col= document.getElementById("col").value
+        let div2=document.getElementById("div2")
+        div2.style.backgroundColor=col;
+        return false
+
+      }
+    </script>
+</body>
+</html>

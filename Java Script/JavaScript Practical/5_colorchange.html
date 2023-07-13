@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            margin-left: 400px;
+               margin-top: 100px;
+        }
+        .main{
+            border: 2px solid black;
+            height: 300px;
+            width: 400px;
+            padding: 20px;
+        }
+        .div3,.div4{
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+        }
+        .divflex{
+            padding-top: 30px;
+            display: flex;
+            gap: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="main">
+            <form action="#">
+                <button id="geencl" onclick="return  greencolor()">Green</button>
+                <button id="geencl" onclick="return bluecolor()">Blue</button>
+        
+            </form>
+            
+            <hr>
+             
+            <div class="divflex">
+                <div class="div3" id="div1"></div>
+                <div class="div4" id="div2"></div>
+        
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    
+
+    <script>
+        function greencolor(){
+            let div1 =document.getElementById("div1")
+            if(div1.style.backgroundColor !="green"){
+                div1.style.backgroundColor="green";
+                return false
+            }else{
+                div1.style.backgroundColor="transparent"
+                return false
+            }
+        }
+        function bluecolor(){
+            let div2 =document.getElementById("div2")
+            if(div2.style.backgroundColor !="blue"){
+                div2.style.backgroundColor="blue";
+                return false
+            }else{
+                div2.style.backgroundColor="transparent"
+                return false
+            }
+        }
+    </script>
+</body>
+</html>
