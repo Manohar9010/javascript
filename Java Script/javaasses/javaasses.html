@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .disc{
+           margin: 50px 250px;
+        }
+        .show{
+             
+            border: 30px solid  rgb(33, 51, 1);
+             
+            width: 800px;
+            height: 500px;
+            position: relative;
+
+        }
+       .displayimg{
+        width: 100%;
+        height: 100%;
+      
+         overflow: hidden;
+       }
+       .showimg{
+          width: 780px;
+           height: 480px;
+         
+       }
+       .displaybtn{
+        display: flex;
+        position: absolute;
+        top: 460px;
+        right: -30px;
+        border: 15px solid rgb(33, 51, 1);
+       }
+       .clickimg{
+        width: 110px;
+        height: auto;
+        cursor: pointer;
+        border: 5px solid rgb(33, 51, 1);
+        filter: brightness(50%);
+
+       }
+       .l-arrow{
+        position: absolute;
+        top: 50px;
+        left: -12px;
+        color: white;
+        font-size: 25px;
+       }
+       .r-arrow{
+        position: absolute;
+        top: 50px;
+        right: -12px;
+        color: white;
+        font-size: 25px;
+
+       }
+
+      
+
+    </style>
+</head>
+<body>
+    <div class="disc">
+        <div class="show">
+            <div class="displayimg">
+            
+                <img src="image1.jpg" alt="Image 1" class="showimg">
+                <img src="image2 .jpg" alt="Image 2" class="showimg">
+                <img src="image3.jpg" alt="" class="showimg">
+                <img src="image4.jpeg" alt="" class="showimg">
+                <img src="image5.jpg" alt="" class="showimg">
+                <img src="image6.jpg" alt="" class="showimg">
+                <img src="images.jpg" alt="" class="showimg">
+        
+            </div>
+            <div class="displaybtn">
+                <span></span>
+                <i class="fa-solid fa-chevron-left l-arrow"></i>
+               
+                <img src="image1.jpg" alt="Image 1" class="clickimg"  onclick="showImage(0)">
+                <img src="image2 .jpg" alt="Image 2" class="clickimg"  onclick="showImage(1)">
+                <img src="image3.jpg" alt="" class="clickimg"  onclick="showImage(2)">
+                <img src="image4.jpeg" alt="" class="clickimg" onclick="showImage(3)">
+                <img src="image5.jpg" alt="" class="clickimg"  onclick="showImage(4)">
+                <img src="image6.jpg" alt="" class="clickimg"  onclick="showImage(5)">
+                <img src="images.jpg" alt="" class="clickimg"  onclick="showImage(6)">
+                
+                <i class="fa-solid fa-chevron-right r-arrow"></i>
+        
+            </div>
+    
+        </div>
+    </div>
+
+   
+
+      
+    <script>
+        var images = document.getElementsByClassName("showimg");
+        var thumbnails = document.getElementsByClassName("clickimg");
+
+         function showImage(index) {
+      for (var i = 0; i < images.length; i++) {
+           images[i].style.display = "none";
+         thumbnails[i].classList.remove("active");
+       
+        
+         
+      }
+  
+        images[index].style.display = "block";
+        thumbnails[index].classList.add("active");
+       
+        
+       }
+    </script>
+
+
+
+
+    
+ 
+</body>
+</html>
