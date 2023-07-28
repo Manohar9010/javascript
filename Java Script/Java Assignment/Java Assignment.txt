@@ -1,0 +1,64 @@
+           -----------------Module:4 (JavaScript Basic & DOM) Assignment------------------
+ 1. What is JavaScript?
+ Ans:- JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
+
+ 2. What is the use of isNaN function?
+ Ans:- => isNaN() returns true if a number is Not-a-Number.
+       => In other words: isNaN() converts the value to a number before testing it.
+
+ 3. What is negative infinity?
+ Ans:- => NEGATIVE_INFINITY is the same as the negative value of the global object's Infinity property.        => This value behaves slightly differently than mathematical infinity:- Any positive value, including POSITIVE_INFINITY, multiplied by NEGATIVE_INFINITY is NEGATIVE_INFINITY.
+
+ 4. Which company developed JavaScript?
+ Ans:- => Netscape:- The Mozilla project provides two JavaScript implementations. The first ever JavaScript was created by Brendan Eich at Netscape, and has since been updated to conform to ECMA-262 Edition 5 and later versions.
+
+ 5. What are undeclared and undefined variables?
+ Ans:- Undefined variable means a variable has been declared but it does not have a value. Undeclared variable means that the variable does not exist in the program at all.
+
+ 6. Write the code adding new element dynamically?
+ Ans:- Creation of new element:-
+       => New elements can be created in JS by using the createElement() method.
+       => Syntax:- document.createElement("<tagName>"); Where <tagName> can be any HTML, tagName like div, ul, button, etc. newDiv element has been created. For Eg:- let newDiv = document.
+
+ 7. What is a difference between viewstate and sessionstate?
+ Ans:- The basic difference between these two is that the ViewState is to manage state at the client's end, making state management easy for end-user while SessionState manages state at the server's end, making it easy to manage content from this end too.
+
+ 8. What is === operator?
+ Ans:- The strict equality operator (===) checks whether its two operands are equal, returning a Boolean result. Unlike the equality operator, the strict equality operator always considers operands of different types to be different.
+
+ 9. How can the style/class of an element be changed?
+ Ans:- Element Class Names Another way to alter the style of an element is by changing its class attribute. class is a reserved word in JavaScript, so in order to access the element's class, you use element className.
+
+ 10. How to read and write a file using JavaScript?
+ Ans:- eadFile() and rs. writeFile() methods are used to read and write of a file using javascript. The file is read using the fs. readFile() function, which is an inbuilt method.
+
+ 11. What are all the looping structure in javascript?
+ Ans:- Different Kinds of Loops:-
+       => For-in:- loops through the properties of an object.
+       => For-of:- loops through the values of an iterable object.
+       => While:- loops through a block of code while a specified condition is true.
+       => Do-While:- also loops through a block of code while a specified condition is true.
+
+ 12. How can you convert the string of any base to in integer in javascript?
+ Ans:- In JavaScript parseInt() function (or a method)is used to convert the passed in string parameter or value to an integer value itself. This function returns an integer of base which is specified in second argument of parseInt() function.
+
+ 13. What is the function of the delete operator?
+ Ans:- The delete operator removes a given property from an object. On successfull deletion, it will return true, else false will be returned.
+
+ 14. What are all the type of pop up boxes available in javascript?
+ Ans:- JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.
+
+ 15. What is the use of void (0)?
+ Ans:- Using javascript, you can run code that does not change the current page. This, used with void(0) means, do nothing don't reload, don't navigate, do not run any code. The "Link" word is treated as a link by the browser. For example, it's focusable, but it doesn't navigate to a new page.
+
+ 16. How can a page be forced to load Another page in javascript?
+ Ans:- Approach:-
+       => We can use window. location property inside the script tag to forcefully load another page in Javascript. It is a reference to a Location object that is it represents the current location of the document. We can change the URL of a window by accessing it.
+
+ 17. What are the disadvantages of using innerhtml in javascript?
+ Ans:- Disadvantages of innerHTML:-
+       => Event handlers attached to any DOM element are preserved.
+       => Replacement is done everywhere.
+       => It is not possible to append innerHTML.
+       => Breaks the document.
+       => Used for Cross-site Scripting.
